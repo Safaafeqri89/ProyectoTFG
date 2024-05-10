@@ -1,0 +1,539 @@
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  .slider-img {
+    min-width: 100%;
+    object-fit: cover;
+  }
+  
+  .slider-btn {
+    position: absolute;
+    width: 65px;
+    height: 45px;
+    border: none;
+    top: 50%;
+    opacity: .80;
+    transition: .3s;
+    cursor: pointer;
+  }
+  
+  .slider-btn * {
+    cursor: pointer;
+  }
+  
+  .slider-btn--left {
+    left: 0;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .slider-btn--right {
+    right: 0;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .slider-btn:hover {
+    opacity: 1;
+    transform: scale(1.07);
+  }
+  
+  .slider-btn:active {
+    transform: scale(1);
+    transition: .1s !important;
+  }
+  
+  .slider-btn:focus {
+    transition: none;
+  }
+  
+  .slider-icon {
+    width: 75%;
+    height: 70%;
+    margin-inline: auto;
+  }
+  .slider-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px; 
+    background-color: var(--acento); /* Color de fondo con el color acento */
+  }
+
+
+/**************************************SLICE**************/
+
+  .slice.triangle {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    background-color: var(--primario);
+  }
+  
+  .slice.triangle::after {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top-color: var(--primario);
+    border-top-style: solid;
+    border-top-width: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+  }
+  
+  .slice.triangle h1 {
+    text-align: center;
+    color: var(--neutral-light);
+    font-weight: 300;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0; 
+  }
+  
+  
+  
+
+ 
+  /*----------------------------------CARDS CATEGORIAS------------------------------------------------*/
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.container .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 300px;
+    background:var(--primario);
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px var(--neutral-light);
+}
+
+.container .card:hover {
+    height: 400px;
+}
+
+.container .card .img-box {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 200px;
+background-color: var(--neutral-dark-active);
+;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .img-box {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px var(--primario-light)
+}
+
+.container .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card .content {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    height: 60px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+    font-family: var(--Roboto-regular);
+}
+
+.container .card:hover .content {
+    top: 100px;
+    height: 300px;
+}
+
+.container .card .content h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primario);
+    margin-top: 15px;
+}
+.container .card .content p {
+    color:var(--primario-light);
+    font-family: var(--Roboto-regular);
+    margin-top:20px;
+    font-size: 18px;
+}
+
+.container .card .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 20px;
+    text-decoration: none;
+    background: var(--primario);
+    color: var(--primario-light);
+    font-weight: 500;
+}
+
+.container .card .content a:hover {
+    opacity: 0.8;
+}
+
+.container .card .content .open
+{
+ 
+    background-color: var(--acento); 
+    color: var(--neutral-light); 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-top: 20px;
+  }
+  
+  .open:hover {
+    background-color: var(--acento); 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /********************SECTION INFORMACION************************/
+
+.section-informacionweb {
+  background-color: var(--primario); /* Fondo azul oscuro */
+  overflow: hidden; /* Limpiar floats */
+ 
+}
+
+.columnas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 80px;
+
+   /* Agregar un margen negativo para compensar los márgenes laterales de las columnas */
+}
+
+.iconos {
+  height: 80px;
+  width: 80px;
+}
+
+.column {
+  flex: 0 1 calc(25% - 20px); /* 4 columnas por fila con espacio entre ellas */
+  margin-bottom: 20px;
+  color: var(--neutral-light); /* Color del texto */
+  padding: 0 10px; /* Agregar un relleno lateral para compensar los márgenes negativos del contenedor */
+}
+.column h3{ margin-top: 15px;}
+.column p {
+  font-size: 1.3rem; /* Tamaño de fuente */
+  margin-top: 20px; /* Margen superior */
+  font-family: var(--Open_Sans-regular);
+
+}
+
+/************************ACCORDION********************************************/
+
+.container-accordion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 80px;
+  margin-right: 80px;}
+
+.container-accordion .accordion h2 {
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--primario);
+  font-size: 32px;
+}
+
+.accordion-item {
+  background-color: var(--primario);
+  color: var(--primario-light);
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 var(--neutral-light);
+}
+
+.accordion-item-header {
+  padding: 1.5rem 1rem; 
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 2rem;
+  border-top: 1px solid;
+  font-size: 20px;
+  border-image: linear-gradient(to right, transparent, var(--acento), transparent) 1;
+}
+
+
+
+/****************************SECTION RESEÑAS*******************************************+*/
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  margin: 0 auto; 
+  max-width: 1440px; 
+}
+
+.card-container h2 {
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--primario);
+  font-size: 32px;
+}
+
+.reseñas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px; 
+  margin: 0 auto; 
+  max-width: 100%px; 
+}
+
+.reseñas {
+  flex: 0 0 calc(20% - 20px);
+  max-width: calc(18% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 2px solid var(--primario);
+  border-radius: 10px;
+  padding: 15px; 
+  box-sizing: border-box; 
+}
+
+.reseñas:last-child {
+  margin-right: 0;
+}
+
+.star-rating {
+  color: var(--acento);
+  margin-bottom: 8px; 
+  font-size: 1.8em; 
+  text-align: center;
+}
+
+.quote p {
+  margin: 0;
+  font-size: 1,4em; 
+  line-height: 1.2em; 
+  text-align: center;
+  color: var(--primario);
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20PX;
+}
+
+.image-container img {
+width: 80px; 
+  height: 80px; 
+  border-radius: 50%;
+}
+
+.image-title {
+  margin-top: 8px; /* Reducción del margen superior */
+  font-size: 16px; /* Reducción del tamaño de la fuente */
+  text-align: center;
+  color: var(--primario);
+  font-weight: bold;
+}
+
+.reseñas:hover {
+  transform: scale(1.08); /* Aumenta el tamaño al 105% al pasar el ratón */
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+
+
+/**********************SCROLL BUTTON***************************/
+
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 120;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-color: var(--acento);
+  color: var(--neutral-light);
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 50%; /* Hace el botón redondo */
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--acento);
+}
+
+
+/*******************************MEDIA RESPONSIVE CARDS**********/
+@media(max-width:650px)
+ {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) 
+{
+    .container .card {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .container .card .img-box {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .container .card .content p {
+        font-size: 0.8rem;
+    }
+
+    .container .card .content a {
+        font-size: 0.9rem;
+    }
+}
+
+  /* -------------------------------RESPONSIVE SLIDER---------------------------------------------------------------------------- */
+  
+  @media (max-width: 650px) {
+    .slider-img {
+      height: 250px;
+    }
+  
+    .slider-btn {
+      width: 40px;
+      height: 30px;
+    }
+
+  }
+  
+  @media (max-width: 500px) {
+    .slider-img {
+      height: 200px;
+    }
+  
+    .slider-btn {
+      width: 30px;
+      height: 20px;
+    }
+  }
+
+  /************************* RESPONSIVE RESEÑAS Y INFORMACION COLUMN **************************/
+@media screen and (max-width: 768px) {
+  .reseñas {
+    flex: 0 0 calc(100% - 20px); 
+    max-width: calc(100% - 20px);
+  }
+}
+
+  
+  @media screen and (max-width: 768px) {
+    .column {
+      flex-basis: calc(50% - 20px); 
+    }
+    .container {
+      width: 100%; 
+    }
+  }
+  
+  /*********************************FIN SECTION*******************/
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

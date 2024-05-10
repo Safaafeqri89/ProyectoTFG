@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <meta charset = 'utf-8' />
+    <meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0' />
+    <title>TuDespacho.net</title>
+    <link rel = 'icon' href = 'assets/icons/favicon.png'>
+    <link rel = 'stylesheet' href = 'css/general.css' />
+    <link rel = 'stylesheet' href = 'css/header.css' />
+    <link rel = 'stylesheet' href = 'css/home.css' />
+   <link rel = 'stylesheet' href = 'css/footer.css' />
+
+
+
+
+   <link rel = 'stylesheet' href = 'css/cta-from/form/style.css' />
+   <link rel = 'stylesheet' href = 'css/cta-from/overlay/style.css' />
+
+   
+    <!--SCRIPT --------------------------------------------------------------------------------- -->
+
+    <script src = 'js/slider.js' defer></script>
+    <script src = 'js/script.js' defer></script>
+   </head>
+ 
+ 
+  <body>
+
+    
+<!--------------------------------HEADER-------------------------------------->
+
+
+<header>
+  <header class='header'>
+    <section class='contenido-header'>
+      <div class='icono-menu-lateral-header  hidden'>
+        <img class='icono-menu-lateral' src='assets/icons/header/menu.svg' alt='menu lateral' />
+      </div>
+
+      <div class = 'logo-wrapper'>
+        <a href = 'home.html'>
+          <img class = 'logo' src = 'assets/img/logo/logo.png' alt = 'logo' />
+        </a>
+      </div>
+
+      <div class='opciones-header'>
+        
+         <div class='opcion-header inicio'>
+          <a href='#'>
+          <img class='icono-header' src='assets/icons/header/home.png' alt='home' />
+            <p>Inicio</p>
+        </div>
+        <!-- -------------------------------- -->
+        <div class='barra-divisoria-header'></div>
+        <!-- -------------------------------- -->
+  
+        <div class='opcion-header servicio'>
+          <a href="categorias/servicios.html" class="dropbtn">
+            <div class="dropdown">
+            <img class='icono-header' src='assets/icons/header/servicio.png' />
+
+                Servicios</a>   
+              <div class="dropdown-content">
+                <a href="#">Diseño</a>
+                <a href="#">Publicidad</a>
+                <a href="#">Marketing</a>
+              </a>
+              </div>
+            </div></a>
+          
+        </div>
+  
+        <!-- -------------------------------- -->
+        <div class='barra-divisoria-header'></div>
+        <!-- -------------------------------- -->
+  
+        <div class='opcion-header presupuesto'>
+        <a href="#">
+            <img class='icono-header'  src='assets/icons/header/presupuesto.png' alt='presupuesto' />
+            <p class = 'cta-btn'>Pedir Presupuesto</p>
+          </a>
+        </div>
+
+
+  <!-- -------------------------formulario Presupuesto Modal----------------------------------------- -->
+
+  <section class = 'cta-form-section hidden'>
+    <article class = 'cta-form-content'>
+      <div class = 'cta-form-text'>
+        <h2>Pedir Presupuesto y te contestamos en el momento</h2>
+        <p>Puede contactar con nosotros para cualquier duda o sugerencia
+        a través del siguiente formulario, por teléfono o por email</p>
+      </div>
+
+      <form class = 'cta-form' name = 'cta-form' action="mailto:safaacenec@gmail.com" data-netlify = 'true'> <!-- method = 'post' data-netlify = 'true' -->
+        <div class = 'cta-input-wrapper cta-name-input'>
+          <label for = 'cta-name'>Nombre<span class = 'obligatorio'>*</span></label>
+          <input id = 'cta-name' class = 'cta-input' type = 'text' name = 'cta-name' required onfocus = 'this.select()' placeholder = 'Introduce tu nombre...' />
+        </div>
+
+        <div class = 'cta-input-wrapper cta-email-input'>
+          <label for = 'cta-email'>Email<span class = 'obligatorio'>*</span></label>
+          <input id = 'cta-email' class = 'cta-input' type = 'email' name = 'cta-email' required onfocus = 'this.select()' placeholder = 'Introduce tu email...' />
+        </div>
+        <div class = 'cta-input-wrapper cta-email-input'>
+          <label for = 'cta-telefono'>Telefono<span class = 'obligatorio'>*</span></label>
+          <input id = 'cta-telefono' class = 'cta-input' type = 'number' name = 'cta-telf' required onfocus = 'this.select()' placeholder = 'Introduce tu telefono...' />
+        </div>
+       
+
+        <div class = 'cta-input-wrapper cta-subscription--type-input'>
+          <label for = 'cta-subscription--type'>Para que Tipo de consulta<span class = 'obligatorio'>*</span></label>
+          <select id = 'cta-subscription--type' class = 'cta-input' name = 'cta-subscription--type' required>
+            <option value = '' selected disabled>Selecciona una categoria</option>
+            <option value = 'abogados'>Abogados</option>
+            <option value = 'gestorias'>Gestorias</option>
+            <option value = 'asesores'>Asesores</option>
+          </select>
+        </div>
+
+
+        <div class = 'cta-input-wrapper cta-email-input'>
+          <label for = 'cta-mensaje'>Mensaje<span class = 'obligatorio'>*</span></label>
+          <textarea id="cta-mensaje" class="cta-input" type="textarea" name="cta-mensaje" cols="50" rows="10">
+            Pedir un presupuesto para una página web es el inicio de todo negocio online            </textarea>       
+           </div>
+
+
+
+        <div class = 'cta-buttons'>
+          <input class = 'cta-submit' type = 'submit' value = 'Enviar' />
+          <input class = 'cta-reset' type = 'reset' value = 'CANCELAR' />
+
+        </div>
+      </form>
+    </article>
+  </section>
+  
+  <div class="cta-blur-overlay"></div>
+  <!-- ------------------------------------------------------------------ -->
+
+
+        <!-- -------------------------------- -->
+  
+        <div class='barra-divisoria-header'></div>
+  
+        <!-- -------------------------------- -->
+  
+        <div class='opcion-header identificate'>
+          <a href='login/loginyregistro.html'>
+            <img class='icono-header' src='assets/icons/header/usuario.png' alt='identificate' />
+            <p>Identifícate</p>
+          </a>
+        </div>
+  
+        <!-- -------------------------------- -->
+  
+        <div class='barra-divisoria-header'></div>
+  
+        <!-- -------------------------------- -->
+  
+        <div class='opcion-header contacto'>
+          <ul>
+            <li class="submenu">
+              <img class='icono-header' src='../assets/icons/header/carro.png' alt='compra' />
+              <div id="carrito">
+                <table id="lista-carrito">
+                  <thead>
+                    <tr>
+                      <!--- <th>Imagen</th>-->
+                      <th>Imagen</th>
+
+                      <th>Nombre</th>
+                      <th>Precio</th>
+                      <th>Cantidad</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <a href="#" id="vaciar-carrito"
+                  >Vaciar Carrito</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class='barra-divisoria-header'></div>
+  
+        <div class='opcion-header contacto'>
+          <a href='tel:+34631558660'>
+            <img class='icono-header' src='assets/icons/header/telefono.png' alt='contacto' />
+            <p>631558660</p>
+          </a>
+        </div>
+  
+      </div>
+  
+    </section>
+  </header>
+  
+      <!-- ----------------FIN HEADER---------------------------- -->
+
+
+    <!-- -----------------SLIDER---------------------------------------- -->
+
+    <!-- main slider -->
+    <main class = 'main '>
+      <section class = 'slider'>
+        <div class = 'slider-wrapper'>
+          <img class = 'slider-img' src = 'assets/img/slider/slider1.jpg' alt = 'imagen1' />
+          <img class = 'slider-img' src = 'assets/img/slider/imagen2.jpg' alt = 'imagen2' />
+          <img class = 'slider-img' src = 'assets/img/slider/slider3.jpg' alt = 'imagen3' />
+          <img class = 'slider-img' src = 'assets/img/slider/imagen4.jpg' alt = 'imagen4' />
+          <img class = 'slider-img' src = 'assets/img/slider/slider2.jpg' alt = 'imagen5' />
+
+          <button class = 'slider-btn slider-btn--left'>
+            <img class = 'slider-icon' src = 'assets/icons/slider/left-arrow.png' alt = 'left arrow' />
+          </button>
+          <button class = 'slider-btn slider-btn--right'>
+            <img class = 'slider-icon' src = 'assets/icons/slider/right-arrow.png' alt = 'right arrow' />
+          </button>
+        </div>
+      </section>
+     
+    <!-- ----------------FIN-SLIDER---------------------------------------- -->
+
+          <section class="slice triangle">
+            <div class="container">
+                <h1>Facilitamos todo para lograr el crecimiento de tu empresa</h1>
+            </div>
+        </section>
+      
+  <!------------------------------CONTENEDOR-CARDS--------------------------->
+
+ <section class="contenidor-cards">
+    
+      <div class="container cards">
+        <div class="card">
+            <div class="img-box">
+                <img src= 'assets/img/home/html.jpg'>
+            </div>
+            <div class="content">
+                <h2>  Diseño web profesional</h2>
+                <p>
+                  Creamos sitios web profesionales con un diseño atractivo y funcionalidades avanzadas adaptadas a sus necesidades específicas.
+                </p>
+                <button class="open"> Mas Info</button>       
+              </div>
+        </div>
+        <div class="card">
+            <div class="img-box">
+                <img src="assets/img/home/seo.jpeg">
+            </div>
+            <div class="content">
+                <h2>Plantillas Web</h2>
+                <p>
+                  Ofrecemos más de 1000 plantillas para elegir, garantizando que encuentre el diseño
+                   perfecto que se ajuste a la identidad de su marca
+                </p>
+                <button class="open"> Mas Info</button>       
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-box">
+                <img src="assets/img/home/plantillas.jpg">
+            </div>
+            <div class="content">
+                <h2>                 Desarrollo web
+                </h2>
+                <p>Optimizamos su sitio web para mejorar su ranking en motores de 
+                  búsqueda, aumentando su visibilidad y atrayendo más tráfico.
+                </p>
+                <button class="open"> Mas Info</button>       
+                </div>
+        </div>
+
+
+
+
+        <div class="card">
+          <div class="img-box">
+              <img src="assets/img/home/diseño.jpg">
+          </div>
+          <div class="content">
+              <h2>                Marketing y Publcidad
+              </h2>
+              <p>Optimizamos su sitio web para mejorar su ranking en motores de 
+                búsqueda, aumentando su visibilidad y atrayendo más tráfico.
+              </p>
+              <button class="open"> Mas Info</button>       
+            </div>
+      </div>
+    </div>
+
+
+
+    <div class="container cards">
+      <div class="card">
+          <div class="img-box">
+              <img src= 'assets/img/home/html.jpg'>
+          </div>
+          <div class="content">
+              <h2> Google Ads</h2>
+              <p>
+                Creamos sitios web profesionales con un diseño atractivo y funcionalidades avanzadas adaptadas a sus necesidades específicas.
+              </p>
+              <button class="open"> Mas Info</button>       
+            </div>
+      </div>
+      <div class="card">
+          <div class="img-box">
+              <img src="assets/img/home/seo.jpeg">
+          </div>
+          <div class="content">
+              <h2>Google Maps</h2>
+              <p>
+                Ofrecemos más de 1000 plantillas para elegir, garantizando que encuentre el diseño
+                 perfecto que se ajuste a la identidad de su marca
+              </p>
+              <button class="open"> Mas Info</button>       
+
+          </div>
+      </div>
+      <div class="card">
+          <div class="img-box">
+              <img src="assets/img/home/plantillas.jpg">
+          </div>
+          <div class="content">
+              <h2>              Posicionamiento Web
+              </h2>
+              <p>Optimizamos su sitio web para mejorar su ranking en motores de 
+                búsqueda, aumentando su visibilidad y atrayendo más tráfico.
+              </p>
+              <button class="open"> Mas Info</button>       
+              </div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+            <img src="assets/img/home/diseño.jpg">
+        </div>
+        <div class="content">
+            <h2>                 E-Commerce
+            </h2>
+            <p>Optimizamos su sitio web para mejorar su ranking en motores de 
+              búsqueda, aumentando su visibilidad y atrayendo más tráfico.
+            </p>
+            <button class="open"> Mas Info</button>       
+          </div>
+    </div>
+  </div>
+
+</section>
+
+  <!------------------------------------FIN SECTION CARDS--------------------------->
+
+  <section class="section-informacionweb">
+    <div class="columnas" >
+      <div class="column">
+        <img class="iconos" src="assets/img/home/icons/diseno-y-desarrollo-web.svg"  alt="Diseño y Desarrollo Web Profesional">
+        <h3>Diseño y Desarrollo Web Profesional</h3>
+        <p>Creamos sitios web profesionales con un diseño atractivo y funcionalidades avanzadas adaptadas a sus necesidades específicas.</p>
+      </div>
+      <div class="column">
+        <img class="iconos" src="assets/img/home/icons/amplia-seleccion-de-plantillas-web.svg" alt="Amplia Selección de Plantillas">
+        <h3>Amplia Selección de Plantillas</h3>
+        <p>Ofrecemos más de 1000 plantillas para elegir, garantizando que encuentre el diseño perfecto que se ajuste a la identidad de su marca.</p>
+      </div>
+      <div class="column">
+        <img  class="iconos" src="assets/img/home/icons/rrss.svg" alt="Noticias Dinámicas mediante RSS">
+        <h3>Noticias Dinámicas mediante RSS</h3>
+        <p>Integramos feeds RSS para actualizar automáticamente su sitio con las últimas noticias y contenido relevante.</p>
+      </div>
+      <div class="column">
+        <img class="iconos" src="assets/img/home/icons/seo.svg" alt="Optimización para SEO">
+        <h3>Optimización para SEO</h3>
+        <p>Optimizamos su sitio web para mejorar su ranking en motores de búsqueda, aumentando su visibilidad y atrayendo más clientes potenciales.</p>
+      </div>
+      <div class="column">
+        <img class="iconos" src="assets/img/home/icons/blog.svg" alt="Optimización para SEO">
+        <h3>DISEÑO RESPONSIVE PARA TABLET Y MÓVIL</h3>
+        <p>Nuestros diseños se adaptan a la perfección en dispositivos móviles y tablets, garantizando una excelente experiencia de usuario en cualquier plataforma..</p>
+      </div>
+      <div class="column">
+        <img  class="iconos" src="assets/img/home/icons/accesibilidad.svg" alt="Optimización para SEO">
+        <h3>ACCESIBILIDAD DE TODOS LOS USUARIOS</h3>
+        <p>Nos aseguramos de que su sitio web sea accesible para todos los usuarios, cumpliendo con los estándares de accesibilidad web .</p>
+      </div>
+      <div class="column">
+        <img  class="iconos" src="assets/img/home/icons/amplia-seleccion-de-plantillas-web.svg" alt="Optimización para SEO">
+        <h3>WOOCOMMERCE PARA 20 PRODUCTOS</h3>
+        <p>Integramos Woocommerce para gestionar hasta 20 productos, facilitando el comercio electrónico en su sitio.</p>
+      </div>
+      <div class="column">
+        <img class="iconos" src="assets/img/home/icons/pasarela-de-pago.svg" alt="Optimización para SEO">
+        <h3>PASARELA DE PAGO CON TODOS LOS METODOS</h3>
+        <p>Incorporamos pasarelas de pago seguras para transacciones sin complicaciones en su sitio web.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--------------------FIN INFORMACIONWEB--------------------------------------->
+
+  
+    
+<!-------------------------------MENU ACCORDION------------------------------------->
+
+
+<div class="container-accordion">
+  <section class="accordion">  
+    <h2>PREGUNTAS FRECUENTES</h2>
+    <div class="accordion-item">
+      <div class="accordion-item-header">
+        ¿Cuál es el proceso de diseño web?
+      </div>
+      <div class="accordion-item-body">
+        <div class="accordion-item-body-content">
+          Una vez que contrates con nosotros y recibido la parte proporcional o total del pago, según el caso, te enviaremos propuestas de estructuras de diseño, para trabajar como base. Además analizaremos cuál es el dominio idóneo para tu web.          
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-item-header">
+        ¿Cuánto tiempo tardan en entregar mi página web?
+      </div>
+      <div class="accordion-item-body">
+        <div class="accordion-item-body-content">
+          Esto depende de la complejidad del proyecto web contratado, normalmente de 5-20 días hábiles, el tiempo de entrega se especifica en nuestro presupuesto.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-item-header">
+        ¿Qué información debo de proporcionar para mi diseño web?
+      </div>
+      <div class="accordion-item-body">
+        <div class="accordion-item-body-content">
+          <ul style="padding-left: 1rem;">
+            <li>HTML, CSS, JavaScript</li>
+            <li>Frameworks (CSS and JavaScript frameworks)</li>
+            <li>Responsive Design</li>
+            <li>Version Control/Git</li>
+            <li>Testing/Debugging</li>
+            <li>Browser Developer Tools</li>
+            <li>Web Performance</li>
+            <li>SEO (Search Engine Optimization)</li>
+            <li>Command Line</li>
+            <li>CMS (Content Management System)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-item-header">
+        ¿Cómo será el diseño estético de mi sitio web?
+      </div>
+      <div class="accordion-item-body">
+        <div class="accordion-item-body-content">
+          El diseño web será PREMIUM, altamente logrado, de última generación incluyendo siempre lo último en efectos visuales y con la calidad de diseño en interfaz y experiencia de usuario.
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+          </div>
+     <!----------------------FIN ACCORDION--------------------------------> 
+      
+
+    
+ 
+
+
+     <div class="card-container">
+              <h2>QUE OPINAN NUESTROS CLIENTES</h2>
+
+      <div class="reseñas-container">
+
+        <div class="reseñas">
+          <div class="star-rating">★★★★★</div>
+          <div class="quote">
+            <p>Genial, buen servicio, muy profesionales.Muy contentos con esta agencia de marketing digital</p>
+          </div>
+          <div class="image-container">
+            <img src="assets/img/home/img1.png" alt="Imagen de perfil">
+            <div class="image-title">Juan Lucas </div>
+          </div>
+        </div>
+    
+        <!-- Puedes repetir este bloque para más reseñas -->
+        <div class="reseñas">
+          <div class="star-rating">★★★☆☆</div>
+          <div class="quote">
+            <p>Genial, buen servicio, muy profesionales.Muy contentos con esta agencia de marketing digital</p>
+          </div>
+          <div class="image-container">
+            <img src="assets/img/home/img4.jpg" alt="Imagen de perfil">
+            <div class="image-title">Alejandro Martin</div>
+          </div>
+        </div>
+
+       
+
+        <div class="reseñas">
+          <div class="star-rating">★★★☆☆</div>
+          <div class="quote">
+            <p>Genial, buen servicio, muy profesionales.Muy contentos con esta agencia de marketing digital</p>
+          </div>
+          <div class="image-container">
+            <img src="assets/img/home/img3.png"  alt="Imagen de perfil">
+            <div class="image-title">Fernando Lopez</div>
+          </div>
+        </div>
+
+
+        <div class="reseñas">
+          <div class="star-rating">★★★☆☆</div>
+          <div class="quote">
+            <p>
+              Nos han ayudado mucho con la parte de diseño y también en publicidad online muy profesionales..</p>
+          </div>
+          <div class="image-container">
+            <img src="assets/img/home/img5.png"  alt="Imagen de perfil">
+            <div class="image-title">Maria jose</div>
+          </div>
+        </div>
+
+
+        <div class="reseñas">
+          <div class="star-rating">★★★☆☆</div>
+          <div class="quote">
+            <p>Genial, buen servicio, muy profesionalesl vehicula.muy profesionales buen servicio
+             </p>
+          </div>
+          <div class="image-container">
+            <img src="assets/img/home/img6.png"  alt="Imagen de perfil">
+            <div class="image-title">Marta Jimnez</div>
+          </div>
+        </div>
+
+
+
+
+        
+
+
+      </div>
+    </div>
+    
+
+    </main>
+     <!-- footer -->
+
+     
+     <section class = 'footer'>
+
+
+        <article class = 'contenido-footer'>
+          <button id="scrollToTopBtn" title="Ir arriba">∧</button>
+
+          <div class = 'textos-footer'>
+            <div class = 'seccion-texto-footer sobre-nosotros'>
+              <h3>Sofware Pymes</h3>
+              <ul>
+                <li>Portal del Empleado</li>
+                <li>Sostenibilidad</li>
+                <li>Portal para Clientes</li>
+                <li>Diseño Web</li>
+               
+              </ul>
+            </div>
+
+            <!-- -------------------------- -->
+
+            <div class = 'barra-divisoria-footer'></div>
+
+            <!-- -------------------------- -->
+
+            <div class = 'seccion-texto-footer Software'>
+              <h3>Apps</h3>
+              <ul>
+                <li>Software Abogados</li>
+                <li>Software Gestorías</li>
+             
+              
+              </ul>
+            </div>
+
+            <!-- -------------------------- -->
+
+            <div class = 'barra-divisoria-footer'></div>
+
+            <!-- -------------------------- -->
+
+            <div class = 'seccion-texto-footer informacion-importante'>
+              <h3>Gestion Clientes</h3>
+              <ul>
+                <li>Gestión Documental</li>
+                <li>Gestión de Expedientes</li>
+                <li>Actuaciones y Trabajos</li>
+                <li>Facturación</li>
+              </ul>
+            </div>
+
+            <!-- -------------------------- -->
+
+            <div class = 'barra-divisoria-footer'></div>
+
+            <!-- -------------------------- -->
+
+            <div class = 'seccion-texto-footer legal'>
+              <h3>Empresa y legal</h3>
+              <div class = 'footer-legal-columnas'>
+                  <ul>
+                    <li>Sobre nosotros</li>
+                    <li>Blog</li>
+                    <li>Portal del Empleado</li>
+                  
+                  </ul>
+                </div>
+
+              
+              </div>
+
+
+              <div class = 'barra-divisoria-footer'></div>
+
+              <!-- -------------------------- -->
+  
+              <div class = 'seccion-texto-footer Software'>
+                <h3>Apps</h3>
+                <ul>
+                  <li>Software Abogados</li>
+                  <li>Software Gestorías</li>
+               
+                
+                </ul>
+              </div>
+
+              <!-- -------------------------- -->
+  
+            </div>
+
+
+ <nav class="sitemap">
+          <ul>
+              <li><a href="#">Condiciones generales</a></li>
+              <li><a href="#">Aviso legal</a></li>
+              <li><a href="#">Política de Privacidad</a></li>
+              <li><a href="#">Disclosure Google Api Policy</a></li>
+          </ul>
+      </nav>
+            
+
+
+      <div class = 'logo--redes-sociales'>
+        <div class = 'barra-divisoria-footer--segundo-wrapper hidden'></div>
+
+        <div class = 'logo-wrapper-footer'>
+          <a href = 'index.html'>
+          <img class = 'logo' src = 'assets/img/logo/logo.png' alt = 'logo' />  
+          </a>
+        </div>
+
+        <div class = 'barra-divisoria-footer--segundo-wrapper hidden'></div>
+
+        <div class = 'redes-sociales'>
+          <h4>Síguenos en:</h4>
+          <div class = 'redes-sociales-iconos'>
+            <div class = 'twitter-wrapper'>
+              <img class = 'icono-social-footer' src = 'assets/icons/socials/twitter.svg' alt = 'twitter' />
+            </div>
+            <div class = 'instagram-wrapper'>
+              <img class = 'icono-social-footer' src = 'assets/icons/socials/instagram.svg' alt = 'instagram' />
+            </div>
+            <div class = 'youtube-wrapper'>
+              <img class = 'icono-social-footer' src = 'assets/icons/socials/youtube.svg' alt = 'youtube' />
+            </div>
+            <div class = 'tiktok-wrapper'>
+              <img class = 'icono-social-footer' src = 'assets/icons/socials/tiktok.svg' alt = 'tiktok' />
+            </div>
+            <div class = 'facebook-wrapper'>
+              <img class = 'icono-social-footer' src = 'assets/icons/socials/facebook.svg' alt = 'facebook' />
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+          </div>
+
+          <!-- ------------------------------------------------------- -->
+
+
+      </section>
+
+
+    </footer>
+
+    <!-- ------------------------------------------------------------------ -->
+
+   

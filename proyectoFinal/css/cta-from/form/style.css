@@ -1,0 +1,265 @@
+.cta-form-section {
+  background-color: transparent;
+  z-index: 10000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  
+}
+
+.cta-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: fit-content;
+  background-color: var(--neutral-light);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 var(--neutral-light);
+}
+
+.cta-form-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.cta-form-text *::selection {
+  background-color: var(--primario);
+  color: var(--neutral-light);
+}
+
+.cta-form-text h2 {
+  font-family: var(--kameron-regular);
+  font-size: 37px;
+  color: var(--primario);
+  text-align: center;
+}
+
+.cta-form-text p {
+  font-family: var(--alata-regular);
+  font-size: 20px;
+  width: 80%;
+  text-align: center;
+  line-height: 1.2;
+  text-wrap: pretty;
+  color: var(--primario);
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: end;
+}
+
+.cta-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cta-input-wrapper label {
+  font-family: var(--inter-bold);
+  font-size: 20px;
+  color: var(--primario);
+}
+
+.obligatorio {
+  font-family: var(--kameron-regular);
+}
+
+.cta-input-wrapper label::selection, .obligatorio::selection {
+  background-color: var(--primario);
+  color: var(--neutral-light);
+}
+
+.cta-input-wrapper input, .cta-input-wrapper select {
+  background-color: var(--primario);
+  color: var(--neutral-light);
+  border-radius: 8px;
+  font-family: var(--kameron-regular);
+  font-size: 16px;
+  padding: 10px;
+}
+
+.cta-input-wrapper input {
+  cursor: text;
+  width: 100%;
+}
+
+.cta-input-wrapper input::placeholder, .cta-input-wrapper select option {
+  color: var(--neutral-light);
+  font-family: var(--kameron-regular);
+  font-size: 16px;
+}
+
+.cta-input-wrapper select {
+  cursor: pointer;
+  width: 100%;
+}
+
+.cta-input-wrapper select option {
+  cursor: pointer;
+  background-color: var(--primario);
+  color: var(--neutral-light);
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cta-buttons input {
+  font-family: var(--anybody-extrabold);
+  font-size: 20px;
+  color: var(--neutral-light);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .2s;
+  padding: 10px;
+  border: none;
+}
+
+.cta-buttons input:hover {
+  transform: scale(1.03);
+}
+
+.cta-buttons input:active {
+  transform: scale(1);
+}
+
+.cta-buttons input:nth-of-type(1) {
+  background-color: var(--acento);
+}
+
+.cta-buttons input:nth-of-type(2) {
+  background-color: var(--primario);
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1450px) {
+  .cta-form-text h2 {
+    font-size: 30px;
+  }
+
+  .cta-form-text p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .cta-input-wrapper label {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 960px) {
+  .cta-input-wrapper label {
+    font-size: 16px;
+  }
+
+  .cta-input-wrapper input, .cta-input-wrapper select {
+    padding: 5px;
+  }
+
+  .cta-buttons input {
+    font-size: 16px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 890px) {
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-form-text h2 {
+    font-size: 25px;
+  }
+
+  .cta-form-text p {
+    font-size: 16px;
+  }
+
+  .cta-input-wrapper label {
+    font-size: 20px;
+  }
+
+  .cta-input-wrapper input, .cta-input-wrapper select {
+    padding: 10px;
+  }
+
+  .cta-buttons input {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 740px) {
+  .cta-form-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .cta-form-text h2 {
+    font-size: 20px;
+  }
+
+  .cta-form-text p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 650px) {
+  .cta-form-content {
+    width: 500px;
+  }
+}
+
+@media (max-width: 580px) {
+  .cta-form-text p {
+    display: none;
+  }
+
+  .cta-input-wrapper label {
+    font-size: 16px;
+  }
+
+  .cta-input-wrapper input, .cta-input-wrapper select {
+    padding: 5px;
+  }
+
+  .cta-input-wrapper input::placeholder, .cta-input-wrapper select option {
+    font-size: 14px;
+  }
+
+  .cta-buttons input {
+    font-size: 16px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 570px) {
+  .cta-form-content {
+    width: 400px;
+  }
+}
+
+@media (max-width: 460px) {
+  .cta-form-content {
+    width: 300px;
+  }
+}
+
+@media (max-width: 350px) {
+  .cta-form-content {
+    width: 250px;
+  }
+}

@@ -1,0 +1,411 @@
+.slice-container {
+    position: relative;
+    height: 100px; }
+  
+
+  .slice.triangle {
+    width: 100%;
+    height: 100%; 
+    position: sticky;
+    top: 0;
+    background-color: var(--primario);
+  }
+  #contraseñaError{
+    color: red;
+    font-size: 12px;
+
+  }
+  #correoError{
+    color: red;
+    font-size: 12px;
+
+  }
+  
+  .slice.triangle::after {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top-color: var(--primario);
+    border-top-style: solid;
+    border-top-width: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+  }
+  
+  .slice.triangle h2 {
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -10PX;
+  }
+  
+  
+button {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+input {
+    background-color: transparent;
+    padding: 5px; 
+    border: 0;
+    outline: 0;
+    margin-bottom: 10px; }
+
+input[type="submit"] {
+    cursor: pointer;
+    margin-bottom: 10px; 
+}
+
+input::-webkit-input-placeholder {
+    font-size: 0.85rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: var(--primario); 
+    margin-bottom: 10px; 
+}
+
+input::-moz-placeholder {
+    font-size: 0.85rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: var(--primario);
+    margin-bottom: 10px; /* Agregué un margen inferior de 10px para crear espacio entre líneas */
+}
+
+input:-ms-input-placeholder {
+    font-size: 0.85rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: var(--primario);
+    margin-bottom: 15px; 
+}
+
+input::placeholder {
+    font-size: 0.85rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: var(--primario);
+    margin-bottom: 15px; /* Agregué un margen inferior de 10px para crear espacio entre líneas */
+}
+
+
+/* Animaciones */
+@-webkit-keyframes moverIzquierda {
+    0% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(-30px, -50%, 0);
+        transform: translate3d(-30px, -50%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+@keyframes moverIzquierda {
+    0% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(-30px, -50%, 0);
+        transform: translate3d(-30px, -50%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+@-webkit-keyframes moverDerecha {
+    0% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(calc(100% + 30px), -50%, 0);
+        transform: translate3d(calc(100% + 30px), -50%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+    }
+}
+
+@keyframes moverDerecha {
+    0% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(calc(100% + 30px), -50%, 0);
+        transform: translate3d(calc(100% + 30px), -50%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+    }
+}
+
+@-webkit-keyframes mostrarRegistro {
+    100% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes mostrarRegistro {
+    100% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Fondo de página */
+.usuario {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-color: var(--#E8EDF2);
+}
+
+
+.contenedor_opciones-usuario {
+    position: relative;
+    width: 80%;
+}
+
+.texto_opciones-usuario {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--primario);
+    border-radius: 3px;
+}
+
+/* Caja y texto de usuario registrado y no registrado */
+.opciones_registrado,
+.opciones_no_registrado {
+    width: 75%;
+    padding: 75px 45px;
+    color:var(--nuetral-light);
+    font-weight: 300;
+    border-radius: 35px; 
+
+}
+
+.titulo_registrado,
+.titulo_no_registrado {
+    margin-bottom: 15px;
+    font-size: 1.66rem;
+    line-height: 1em;
+    color: blanchedalmond;
+}
+
+.texto_no_registrado,
+.texto_registrado {
+    font-size: 1,05rem;
+    line-height: 1.4em;
+}
+
+.inicio_sesion_registrado,
+.registro_no_registrado {
+    margin-top: 30px;
+    border: 3px solid #ccc;
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1em;
+    letter-spacing: 0.2rem;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.inicio_sesion_registrado:hover,
+.registro_no_registrado:hover {
+    color: var(--acento);
+    background-color: #ccc;
+}
+
+/* Formularios de inicio de sesión y registro */
+.formularios_opciones-usuario {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: calc(50% - 30px);
+    min-height: 420px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 2px 0 15px var(--primario);
+    overflow: hidden;
+    -webkit-transform: translate3d(100%, -50%, 0);
+    transform: translate3d(100%, -50%, 0);
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+
+
+.titulo_formulario {
+    margin-bottom: 45px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: var(--primario);
+    letter-spacing: 0.1rem;
+}
+
+
+
+.botones_formulario {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.boton_olvido {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.1rem;
+    color: #ccc;
+    text-decoration: underline;
+    -webkit-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+
+.boton_olvido:hover {
+    color: #b3b3b3;
+}
+
+.accion_botones_formulario {
+    background-color:var(--acento);
+    border-radius: 3px;
+    padding: 10px 35px;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    color: var(--primario);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.accion_botones_formulario:hover {
+    background-color:var(--acento);
+}
+.usuario .formulario_registro,
+.usuario .formulario_inicio_sesion {
+    position: absolute;
+    color: var(--primario);
+    top: 70px;
+    left: 40px;
+    width: calc(100% - 80px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.usuario .formulario_registro {
+    transform: translate3d(120px, 0, 0);
+}
+
+.usuario .formulario_registro .botones_formulario {
+    justify-content: flex-end;
+}
+
+.usuario .formulario_inicio_sesion {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.usuario .formularios_opciones-usuario.Left {
+    animation: moverIzquierda 1s forwards;
+}
+
+.usuario .formularios_opciones-usuario.Left .formulario_registro {
+    animation: mostrarRegistro 1s forwards;
+}
+
+.usuario .formularios_opciones-usuario.Left .formulario_inicio_sesion {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(-120px, 0, 0);
+}
+
+.usuario .formularios_opciones-usuario.Right {
+    animation: moverDerecha 1s forwards;
+}
+@media screen and (max-width: 480px) {
+    .contenedor_opciones-usuario {
+        width: 95%;
+    }
+
+    .opciones_registrado,
+    .opciones_no_registrado {
+        padding: 20px;
+    }
+
+    .texto_opciones-usuario {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titulo_registrado,
+    .titulo_no_registrado,
+    .texto_no_registrado,
+    .texto_registrado,
+    .inicio_sesion_registrado,
+    .registro_no_registrado {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .formularios_opciones-usuario {
+        position: relative; 
+        width: 100%;
+        left: 0;
+        top: 0;
+        transform: none; /* Reiniciar la transformación */
+        min-height: 310px; /* Altura mínima añadida */
+
+    }
+}
+
