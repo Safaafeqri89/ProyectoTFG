@@ -165,13 +165,13 @@
                                                                                 </tr>
                                                                                 <tr>
                                                                                     <td align="left" class="esd-block-text es-p10t es-p5b es-m-txt-l">
-                                                                                        <h3>{{$product->name}}</h3>
+                                                                                        <h3>{{$product->nombre}}</h3>
                                                                                     </td>
                                                                                 </tr>
                                                                         
                                                                                 <tr>
                                                                                     <td align="left" class="esd-block-text es-p5t es-p5b">
-                                                                                        <p>{{$product->description}}</p>
+                                                                                        <p>{{$product->descripcion}}</p>
                                                                                     </td>
                                                                                 </tr>
                                                                             </tbody>

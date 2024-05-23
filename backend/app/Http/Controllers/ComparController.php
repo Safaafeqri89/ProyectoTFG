@@ -29,7 +29,7 @@ class ComparController extends Controller
                 $productos = Producto::find($producto_id);
 
                 Mail::to($email)->send(new sendEmail($name, $productos));
-                return response()->json(['message' => 'productos added to list'], 200);
+                return response()->json(['message' => 'producto añadido a list'], 200);
             }else{
 
                 $productos = [];
@@ -46,7 +46,7 @@ class ComparController extends Controller
                     
                 }
                 Mail::to($email)->send(new sendEmail($name, $productos));
-                return response()->json(['message' => 'productos added to list'], 200);
+                return response()->json(['message' => 'productos añadidos a list'], 200);
             }
 
         }catch(\Exception $e){
