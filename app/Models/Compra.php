@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Compra extends Model
 {
     use HasFactory;
-        // Definir the relationship with Producto
+        // Definir la relacion conProducto
 
     public function producto()
     {

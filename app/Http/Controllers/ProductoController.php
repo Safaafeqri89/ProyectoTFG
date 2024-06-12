@@ -8,12 +8,49 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 class ProductoController extends Controller
 {
+     /**
+     * @OA\Get(
+     *     path="/api/productos",
+     *     summary="Ver todos productos",
+     *     @OA\Response(
+     *         response=200,
+     *         description="A list of productos",
+     *         @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/Producto"))
+     *     )
+     * )
+     */
     public function index()
     {
         $productos = Producto::with('categorias')->get();
         return response()->json($productos, 200);
     }
 
+
+/**
+     * @OA\Post(
+     *     path="/api/productos",
+     *     summary="Crear nuevo producto",
+     *     security={{"bearerAuth": {}}},
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(ref="#/components/schemas/ProductoRequest")
+     *     ),
+     *     @OA\Response(
+     *         response=201,
+     *         description="Producto creado successfully",
+     *         @OA\JsonContent(ref="#/components/schemas/Producto")
+     *     ),
+     *     @OA\Response(
+     *         response=401,
+     *         description="Unauthorized"
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Internal Server Error"
+     *     ),
+     * 
+     * )
+     */
     public function store(ProductoRequest $request)
     {
                // Verificar si el usuario autenticado es un admin
@@ -47,6 +84,41 @@ class ProductoController extends Controller
         }
     }
 
+
+     /**
+     * @OA\Put(
+     *     path="/api/productos/{id}",
+     *     summary="Modificar a producto",
+     *     security={{"bearerAuth":{}}},
+     *     @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         required=true,
+     *         @OA\Schema(type="integer")
+     *     ),
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(ref="#/components/schemas/ProductoRequest")
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Producto modificado correctamente",
+     *         @OA\JsonContent(ref="#/components/schemas/Producto")
+     *     ),
+     *     @OA\Response(
+     *         response=401,
+     *         description="Unauthorized"
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="Producto not found"
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Internal Server Error"
+     *     )
+     * )
+     */
     public function update(ProductoRequest $request, $id)
     {
 
@@ -87,6 +159,35 @@ class ProductoController extends Controller
         }
     }
     
+     /**
+     * @OA\Delete(
+     *     path="/api/productos/{id}",
+     *     summary="Delete a producto",
+     *     security={{"bearerAuth":{}}},
+     *     @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         required=true,
+     *         @OA\Schema(type="integer")
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Producto eliminado successfully"
+     *     ),
+     *     @OA\Response(
+     *         response=401,
+     *         description="Unauthorized"
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="Producto not found"
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Internal Server Error"
+     *     )
+     * )
+     */
     public function destroy($id)
     {
         try {
@@ -109,6 +210,47 @@ class ProductoController extends Controller
         }
     }
     
+
+
+/**
+ * @OA\Get(
+ *     path="/api/producto/{id}",
+ *     summary="Ver producto por ID",
+ *     description="Obtiene los detalles de un producto específico mediante su ID.",
+ *     operationId="getProductoById",
+ *     @OA\Parameter(
+ *         name="id",
+ *         in="path",
+ *         required=true,
+ *         description="ID del producto que se desea obtener",
+ *         @OA\Schema(
+ *             type="integer"
+ *         )
+ *     ),
+ *     @OA\Response(
+ *         response=200,
+ *         description="Operación exitosa",
+ *         @OA\JsonContent(
+ *             type="object",
+ *             @OA\Property(property="producto", ref="#/components/schemas/Producto"),
+ *             @OA\Property(
+ *                 property="nombre_categoria",
+ *                 type="string",
+ *                 example="Electrónicos"
+ *             )
+ *         )
+ *     ),
+ *     @OA\Response(
+ *         response=404,
+ *         description="Producto no encontrado",
+ *         @OA\JsonContent(
+ *             type="object",
+ *             @OA\Property(property="message", type="string", example="Producto not found")
+ *         )
+ *     )
+ * )
+ */
+
   
 
     public function show($id)
