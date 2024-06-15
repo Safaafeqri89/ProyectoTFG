@@ -1,0 +1,476 @@
+
+.slice.triangle {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    background-color: var(--primario);
+  }
+  
+  .slice.triangle::after {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top-color: var(--primario);
+    border-top-style: solid;
+    border-top-width: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+  }
+  
+  .slice.triangle h2 {
+    text-align: center;
+    color: var(--neutral-light);
+    font-weight: 300;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 40px;
+  }
+  
+  
+
+
+
+  #correoError {
+    color: red;
+    font-size: 12px;
+}
+
+#errorPassword {
+    color: red;
+    font-size: 12px;
+}
+#contraseñaError {
+    color: red;
+    font-size: 12px;
+}
+
+button {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+input {
+    background-color: transparent;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 0.85rem;
+    font-family: var(--Roboto-regular);
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: var(--primario);
+}
+
+input::-moz-placeholder {
+    font-size: 0.85rem;
+    font-family: var(--Roboto-regular);
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: var(--primario);
+}
+
+input:-ms-input-placeholder {
+    font-size: 0.85rem;
+    font-family: var(--Roboto-regular);
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: var(--primario);
+}
+
+input::placeholder {
+    font-size: 0.85rem;
+    font-family: var(--Roboto-regular);
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: var(--primario);
+}
+
+/* Animaciones */
+@-webkit-keyframes moverIzquierda {
+    0% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(-30px, -50%, 0);
+        transform: translate3d(-30px, -50%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+@keyframes moverIzquierda {
+    0% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(-30px, -50%, 0);
+        transform: translate3d(-30px, -50%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+@-webkit-keyframes moverDerecha {
+    0% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(calc(100% + 30px), -50%, 0);
+        transform: translate3d(calc(100% + 30px), -50%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+    }
+}
+
+@keyframes moverDerecha {
+    0% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(calc(100% + 30px), -50%, 0);
+        transform: translate3d(calc(100% + 30px), -50%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+    }
+}
+
+@-webkit-keyframes mostrarRegistro {
+    100% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes mostrarRegistro {
+    100% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Fondo de página */
+.usuario {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-color: var(--neutral-light);
+}
+
+.contenedor_opciones-usuario {
+    position: relative;
+    width: 80%;
+}
+
+.texto_opciones-usuario {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--primario);
+    border-radius: 3px;
+}
+
+/* Caja y texto de usuario registrado y no registrado */
+.opciones_registrado,
+.opciones_no_registrado {
+    width: 65%;
+    padding: 75px 45px;
+    color: var(--neutral-light);
+    font-weight: 300;
+    border-radius: 35px;
+}
+
+.titulo_registrado,
+.titulo_no_registrado {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    line-height: 1em;
+    color: var(--neutral-light);
+}
+
+.texto_no_registrado,
+.texto_registrado {
+    font-size: 1.05rem;
+    line-height: 1.4em;
+    color: var(--neutral-light);
+}
+
+.inicio_sesion_registrado,
+.registro_no_registrado {
+    margin-top: 30px;
+    border: 3px solid var(--neutral-light);
+    border-radius: 3px;
+    padding: 5px 15px;
+    color: var(--neutral-light);
+    text-transform: uppercase;
+    line-height: 1em;
+    letter-spacing: 0.2rem;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.inicio_sesion_registrado:hover,
+.registro_no_registrado:hover {
+    color: var(--acento);
+    background-color: var(--neutral-light);
+}
+
+/* Formularios de inicio de sesión y registro */
+.formularios_opciones-usuario {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: calc(50% - 30px);
+    min-height: 350px;
+    background-color: var(--neutral-light);
+    border-radius: 3px;
+    box-shadow: 2px 0 15px var(--primario);
+    overflow: hidden;
+    -webkit-transform: translate3d(100%, -50%, 0);
+    transform: translate3d(100%, -50%, 0);
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.titulo_formulario {
+    margin-bottom: 5px;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: var(--primario);
+    letter-spacing: 0.1rem;
+    font-size: 1.3rem;
+    font-family: var(--Raleway-extrabold);
+}
+
+.botones_formulario {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.boton_olvido {
+    font-family: var(--Roboto-regular);
+    letter-spacing: 0.1rem;
+    color: var(--acento);
+    text-decoration: underline;
+    -webkit-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+
+.boton_olvido:hover {
+    color: var(--primario);
+}
+
+.accion_botones_formulario {
+    background-color: var(--acento);
+    border-radius: 4px;
+    padding: 8px 4px;
+    font-size: 1rem;
+    font-family: var(--Roboto-regular);
+    font-weight: 300;
+    color: var(--primario);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.accion_botones_formulario:hover {
+    background-color: var(--acento);
+}
+
+.usuario .formulario_registro,
+.usuario .formulario_inicio_sesion {
+    position: absolute;
+    color: var(--primario);
+    font-family: var(--Roboto-regular);
+    top: 30px;
+    left: 40px;
+    width: calc(100% - 80px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.usuario .formulario_registro {
+    transform: translate3d(120px, 0, 0);
+ }
+
+.usuario .formulario_registro .botones_formulario {
+    justify-content: flex-end;
+}
+
+.usuario .formulario_inicio_sesion {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.usuario .formularios_opciones-usuario.Left {
+    animation: moverIzquierda 1s forwards;
+}
+
+.usuario .formularios_opciones-usuario.Left .formulario_registro {
+    animation: mostrarRegistro 1s forwards;
+}
+
+.usuario .formularios_opciones-usuario.Left .formulario_inicio_sesion {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(-120px, 0, 0);
+}
+
+.usuario .formularios_opciones-usuario.Right {
+    animation: moverDerecha 1s forwards;
+} 
+
+@media screen and (max-width: 600px) {
+    /* Ocultar elementos innecesarios para una vista más limpia */
+    .texto_opciones-usuario,
+    .opciones_registrado,
+    .boton_olvido,
+    .opciones_no_registrado {
+        display: none;
+    }
+
+    /* Optimizar el contenedor principal de los formularios para centrarlos y eliminar sombras */
+    .formularios_opciones-usuario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%; /* Un poco más amplio que en 430px */
+        height: auto;
+        position: relative;
+        margin: 0 auto;
+        box-shadow: none;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    /* Ajustar formularios de registro e inicio de sesión para llenar adecuadamente el espacio disponible */
+    .usuario .formulario_registro,
+    .usuario .formulario_inicio_sesion {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 90%; /* Haciéndolos un poco más anchos para aprovechar el espacio adicional */
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition: none;
+        animation: none;
+    }
+
+    /* Ajustar los botones dentro de los formularios para manejar mejor el espacio */
+    .botones_formulario {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .botones_formulario button {
+        margin-top: 5px;
+        width: 90%;
+    }
+
+    /* Estilos universales para input, textarea, select y botones para garantizar consistencia */
+    input, textarea, select, button {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 12px; /* Mantener un tamaño de fuente legible */
+    }
+
+    button {
+        border: none;
+        padding: 10px; 
+        cursor: pointer;
+    }
+
+
+    .usuario .formulario_registro,
+    .usuario .formulario_inicio_sesion {
+        top: 10px;
+        left: 10px;
+        width: calc(100% - 20px);
+        font-size: 12px; 
+    }
+
+    .usuario .formulario_registro {
+        transform: translate3d(40px, 0, 0);
+    }
+
+    .usuario .formulario_inicio_sesion {
+        transform: translate3d(0, 0, 0);
+    }
+
+    .usuario .formularios_opciones-usuario.Left .formulario_registro {
+        transform: translate3d(0, 0, 0);
+    }
+
+    .usuario .formularios_opciones-usuario.Left .formulario_inicio_sesion {
+        transform: translate3d(-40px, 0, 0);
+    }
+    @keyframes moverIzquierda {
+        from { transform: translate3d(0, 0, 0); }
+        to { transform: translate3d(-120px, 0, 0); }
+    }
+    
+    @keyframes mostrarRegistro {
+        from { opacity: 0; visibility: hidden; }
+        to { opacity: 1; visibility: visible; }
+    }
+    
+    @keyframes moverDerecha {
+        from { transform: translate3d(0, 0, 0); }
+        to { transform: translate3d(-40px, 0, 0); }
+    }
+
+}

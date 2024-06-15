@@ -1,0 +1,546 @@
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  .slider-img {
+    min-width: 100%;
+    object-fit: cover;
+  }
+  
+  .slider-btn {
+    position: absolute;
+    height: 45px;
+    border: none;
+    top: 50%;
+    opacity: .80;
+    transition: .3s;
+    cursor: pointer;
+  }
+  
+  .slider-btn * {
+    cursor: pointer;
+  }
+  
+  .slider-btn--left {
+    left: 0;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .slider-btn--right {
+    right: 0;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .slider-btn:hover {
+    opacity: 1;
+    transform: scale(1.07);
+  }
+  
+  .slider-btn:active {
+    transform: scale(1);
+    transition: .1s !important;
+  }
+  
+  .slider-btn:focus {
+    transition: none;
+  }
+  
+  .slider-icon {
+    width: 75%;
+    height: 70%;
+    margin-inline: auto;
+  }
+  .slider-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px; 
+    background-color: var(--acento); 
+  }
+
+
+/**************************************SLICE despues de banner**************/
+
+.slice.triangle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  position: relative;
+  background-color: var(--primario);
+  flex-direction: column;
+}
+
+/* Triángulo */
+.slice.triangle::after {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top-color: var(--primario);
+  border-top-style: solid;
+  border-top-width: 20px;
+  content: "";
+  position: absolute;
+  bottom: -20px; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Texto */
+.slice.triangle h1 {
+  color: var(--neutral-light);
+  font-weight: 300;
+  margin: 0;
+  text-align: center;
+}
+  
+
+ 
+  /*----------------------------------CARDS CATEGORIAS------------------------------------------------*/
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 20px 0px;
+    padding: 50px 20px;
+  }
+  
+  .container .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 250px;
+    max-width: 100%;
+    height: 200px;
+    background: var(--primario);
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(246, 237, 237, 0.15);
+    margin-bottom: 20px;
+    margin:0px 40px;
+  }
+  
+  .container .card:hover {
+    height: 300px;
+  }
+  
+  .container .card .img-box {
+    position: absolute;
+    top: 10px;
+    width: 220px;
+    height: 150px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .container .card:hover .img-box {
+    top: -80px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px var(--primario-light);
+  }
+  
+  .container .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .container .card .content {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .container .card:hover .content {
+    top: 70px;
+    height: 200px;
+  }
+  
+  .container .card .content h2 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--primario);
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .container .card .content p {
+    color: var(--primario-light);
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .container .card .content a {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background: var(--primario);
+    color: var(--primario-light);
+    font-weight: 500;
+  }
+  
+  .container .card .content a:hover {
+    opacity: 0.8;
+  }
+  
+  .container .card .content .open {
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: var(--acento);
+    color: var(--neutral-light);
+  }
+  
+  
+
+  /********************SECTION INFORMACION************************/
+
+  .section-informacionweb {
+    background-color: var(--primario); /* Fondo azul oscuro */
+    overflow: hidden; /* Limpiar floats */
+    margin-top: 20px;
+ 
+  }
+  
+  .columnas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 60px; /* Ajustar margen izquierdo */
+    margin-right: 60px; /* Ajustar margen derecho */
+    margin-top: 20px;
+   
+  }
+  
+  .iconos {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .column {
+    flex: 0 1 calc(25% - 20px); /* 4 columnas por fila con espacio entre ellas */
+    margin-bottom: 20px;
+    color: var(--primario-light);
+    padding: 0 10px;
+  }
+  
+  .column h4 {
+    margin-top: 15px;
+    font-family: var(--Raleway-extrabold);
+  
+  }
+  
+  .column p {
+    font-size: 14px;
+    margin-top: 20px;
+    font-family: var(--Roboto-regular);
+  }
+  
+/************************ACCORDION********************************************/
+
+.container-accordion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--Raleway-extrabold);
+}
+
+.container-accordion .accordion h1 {
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--primario);
+}
+
+.accordion-item {
+  background-color: var(--primario);
+  color: var(--primario-light);
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 var(--neutral-light);
+}
+
+.accordion-item-header {
+  padding: 1.5rem 1rem; 
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+font-family: var(--Raleway-extrabold);  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--neutral-light);
+  width: 100%;
+
+}
+
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 2rem;
+  border-top: 1px solid;
+  font-size: 14px;
+  color:var(--primario-light);
+  font-family: var(--Roboto-regular);
+  border-image: linear-gradient(to right, transparent, var(--acento), transparent) 1;
+}
+
+
+
+/****************************SECTION RESEÑAS*******************************************+*/
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  margin: 0 auto; 
+  max-width: 1440px; 
+  font-family: var(--Raleway-extrabold);
+}
+
+.card-container h1 {
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--primario);
+}
+
+.reseñas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px; 
+  margin: 0 auto; 
+  max-width: 100%px; 
+}
+
+.reseñas {
+  flex: 0 0 calc(20% - 20px);
+  max-width: calc(18% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 15px; 
+  box-sizing: border-box; 
+}
+
+.reseñas:last-child {
+  margin-right: 0;
+}
+
+.star-rating {
+  color: var(--acento);
+  margin-bottom: 8px; 
+  font-size: 1.8em; 
+  text-align: center;
+}
+
+.quote p {
+  margin: 0;
+  font-size: 16px; 
+  line-height: 1.2em; 
+  text-align: center;
+  color: var(--primario);
+font-family: var(--Roboto-regular);
+
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20PX;
+}
+
+.image-container img {
+width: 80px; 
+  height: 80px; 
+  border-radius: 50%;
+}
+
+.image-title {
+  margin-top: 8px; 
+  font-size: 22px; 
+  text-align: center;
+  color: var(--primario);
+  font-weight: bold;
+}
+
+.reseñas:hover {
+  transform: scale(1.08); /* Aumenta el tamaño al 105% al pasar el ratón */
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+
+
+/**********************SCROLL BUTTON***************************/
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  z-index: 100;
+  font-size: 16px; /* Ajustar el tamaño de la fuente */
+  border: none;
+  outline: none;
+  background-color: var(--acento);
+  color: var(--neutral-light);
+  cursor: pointer;
+  padding: 10px; /* Reducir el padding */
+  border-radius: 50%; /* Mantiene el botón redondo */
+}
+
+
+#scrollToTopBtn:hover {
+  background-color: var(--acento);
+}
+
+
+
+
+
+ /* -------------------------------RESPONSIVE SLIDER---------------------------------------------------------------------------- */
+  
+ @media (max-width: 650px) {
+  .slider-img {
+    height: 250px;
+  }
+
+  .slider-btn {
+    width: 40px;
+    height: 30px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .slider-img {
+    height: 200px;
+  }
+
+  .slider-btn {
+    width: 30px;
+    height: 20px;
+  }
+}
+
+
+
+
+/************************ Slice Media query para pantallas pequeñas************  */
+@media (max-width: 768px) {
+  .slice.triangle {
+    height: 60px; /* Reducir la altura para pantallas pequeñas */
+  }
+
+  /* Reducir el tamaño del triángulo para pantallas pequeñas */
+  .slice.triangle::after {
+    border-top-width: 10px;
+    bottom: -10px;
+  }
+
+  /* Ajustar tamaño del texto para pantallas pequeñas */
+  .slice.triangle h1 {
+    font-size: 14px;
+  }
+  .accordion-item-header{
+    font-size: 18px;
+  }
+}
+
+/*******************************MEDIA RESPONSIVE CARDS**********/
+@media(max-width:650px)
+ {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) 
+{
+    .container .card {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .container .card .img-box {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .container .card .content p {
+        font-size: 0.8rem;
+    }
+
+    .container .card .content a {
+        font-size: 0.9rem;
+    }
+}
+
+ 
+  /************************* RESPONSIVE RESEÑAS Y INFORMACION COLUMN **************************/
+@media screen and (max-width: 768px) {
+  .reseñas {
+    flex: 0 0 calc(100% - 20px); 
+    max-width: calc(100% - 20px);
+  }
+}
+
+  
+  @media screen and (max-width: 768px) {
+    .column {
+      flex-basis: calc(50% - 20px); 
+    }
+    .column p{
+      font-size: 12px;
+    }
+    .column h4{
+      font-size: 14px;
+    }
+    .container {
+      width: 100%; 
+    }
+  }
+  
+  /*********************************FIN SECTION*******************/
+ 

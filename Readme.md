@@ -1,7 +1,8 @@
-<h1>Anteproyecto</h1>
-<h2>Enlace de notion:</h2>
+# React + Vite
 
-https://shore-wheel-d7b.notion.site/Anteproyecto-b3bd58e6b5ed4d5d9f973283113aa894?pvs=4
-<h1>Documentación</h1>
-<h2>Enlace de notion:</h2>
-https://shore-wheel-d7b.notion.site/Proyecto-tuDespacho-7d38e2ed392f495f9c232db459af9e8f?pvs=4
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
